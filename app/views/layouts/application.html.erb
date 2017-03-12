@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trikke and Turf</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+  </head>
+
+    <body>
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-logo">
+              <!-- Navbar goes here -->
+              <%= link_to root_path do%>
+              <%= image_tag "tata_logo.svg", alt:"TaTa Logo"%>
+              <% end %>
+              <span class="text-uppercase">Trikke &amp; Turf Assoc. Blog</span>
+            </div>
+            <div class="col-sm-6 col-nav text-right">
+             <a href="" class="text-uppercase">About</a>
+             <a href="" class="text-uppercase">Search <i class="glyphicon glyphicon-search"></i></a>
+             <!-- End Navbar  -->
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-brand text-center">
+              <h1 class="text-uppercase">Trikke &amp; Turf Assoc.</h1>
+              <span>An Iron Yard Academy Project Est. Spring 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+    <!--Container for Bootstrap elements -->
+      <%= yield %>
+    </div>
+    <hr />
+    <div class ="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="text-uppercase text-center pop-posts">Most Popular Posts</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="post1" class="col-sm-3 photos text-center">
+          <a href="#" class="bottom"><h3>Exciting content!</h3></a>
+        </div>
+        <div id="post2" class="col-sm-3 photos text-center">
+          <a href="#" class="bottom"><h3>Exciting content!</h3></a>
+        </div>
+        <div id="post3" class="col-sm-3 photos text-center">
+          <a href="#" class="bottom"><h3>Exciting content!</h3></a>
+        </div>
+        <div id="post4" class="col-sm-3 photos text-center">
+          <a href="#" class="bottom"><h3>Exciting content!</h3></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row container-fluid">
+        <div class="col-sm-offset-1 col-sm-5 text-center">
+          <%= image_tag "ironyardlogo", class: "logo", alt:"The Iron Yard Logo" %>
+          <span>The Ironyard Copyright 2013, All Rights Reserved</span>
+        </div>
+
+        <div class="col-sm-offset-2 col-sm-4 ft-nav-items text-right">
+          <a class="ft-nav-items" href="#"> &nbsp; Nav Item 1 &nbsp; </a> |
+          <a class="ft-nav-items" href="#"> &nbsp; Nav Item 2 &nbsp; </a> |
+          <a class="ft-nav-items" href="#"> &nbsp; Nav Item 3 &nbsp; </a> |
+          <a class="ft-nav-items"href="#"> &nbsp; Nav Item 4 &nbsp; </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

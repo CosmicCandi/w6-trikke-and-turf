@@ -1,0 +1,236 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'trikkes';
+// @import 'posts';
+// @import 'users';
+
+// * {
+//   border: 1px red solid;
+// }
+
+header {
+  background: linear-gradient(rgba(15,109,181,0.3),rgba(15,109,181,0.75));
+  background-image: url('trikke-header.jpg');
+  background-size: cover;
+  margin-bottom: 30px;
+
+    .col-logo{
+      padding-top: 20px;
+
+      img {
+        width: 40px;
+        background-position: center center;
+        background-size: 100% 100%;
+      }
+
+        span {
+          font-size: 18px;
+          font-weight: bold;
+          color: rgb(8,38,103);
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+      }
+
+    .col-nav {
+      padding-top: 25px;
+
+      a {
+        color: rgb(8, 38, 103);
+        margin-right: 40px;
+        text-decoration: none;
+      }
+
+      a:last-child {
+        margin: 0;
+      }
+    }
+
+    .col-brand {
+        padding: 100px 0;
+
+      h1{
+        color: #FFF;
+        font-size: 80px;
+        margin: 0;
+        font-family: sans-serif;
+      }
+      span {
+        font-weight: bold;
+        color: rgb(8, 38, 103);
+        text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  .pop-posts{
+    color: #083451;
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: helvetica, sans-serif;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+
+  footer {
+
+    background-color: #231F20;
+    color: #FFF;
+    font-size: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+
+    .col-sm-5 {
+      display:flex;
+      align-items: center;
+      height: 50px;
+    }
+
+    .col-sm-4{
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
+
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .ft-nav-items {
+      color: #FFF;
+      text-decoration: none;
+    }
+
+}
+
+.photos{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+  #post1{
+    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("redtrikke");
+    background-size: cover;
+    height: 355px;
+
+      a{
+        color: #FFF;
+        text-decoration: none;
+      }
+
+      h3{
+        font-weight: bolder;
+      }
+  }
+
+  #post1:hover{
+    background-image: image-url("redtrikke");
+    text-shadow: 1px 1px 3px #FFF;
+    font-weight: bolder;
+
+    a{
+    color: #083451;
+    text-decoration: none;
+    }
+
+    h3{
+        font-weight: bolder;
+      }
+  }
+
+  #post2{
+    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("T78csCUTout");
+    background-size: cover;
+    height: 355px;
+
+      a{
+        color: #FFF;
+        text-decoration: none;
+      }
+
+      h3{
+        font-weight: bolder;
+      }
+  }
+
+  #post2:hover{
+    background-image: image-url("T78csCUTout");
+    text-shadow: 1px 1px 3px #FFF;
+
+    a{
+    color: #083451;
+    text-decoration: none;
+    }
+
+    h3{
+      font-weight: bolder;
+    }
+  }
+
+  #post3{
+    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("lifestyles_pro_01");
+    background-size: cover;
+    height: 355px;
+
+    a{
+      color: #FFF;
+      text-decoration: none;
+      }
+
+      h3 {
+        font-weight: bolder;
+      }
+  }
+
+  #post3:hover{
+    background-image: image-url("lifestyles_pro_01");
+    text-shadow: 1px 1px 3px #FFF;
+
+    a{
+      color: #083451;
+      text-decoration: none;
+      font-weight: bolder;
+    }
+
+    h3{
+      font-weight: bolder;
+    }
+  }
+
+  #post4{
+    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("trikkeinaction");
+    background-size: cover;
+    height: 355px;
+
+    a{
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    h3 {
+      font-weight: bolder;
+    }
+
+  }
+
+  #post4:hover{
+    background-image: image-url("trikkeinaction");
+    text-shadow: 1px 1px 3px #FFF;
+
+    a{
+    color: #083451;
+    text-decoration: none;
+    }
+
+    h3{
+      font-weight: bolder;
+    }
+  }

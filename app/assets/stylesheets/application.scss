@@ -114,27 +114,34 @@ header {
   justify-content: center;
   text-decoration: none;
   padding-bottom: 10px;
+  background-size:cover;
+  background-color: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75));
 }
 
   #post1{
-    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("redtrikke");
-    background-size: cover;
     height: 355px;
 
-      a{
-        color: #FFF;
-        text-decoration: none;
-      }
+    img{
+      opacity: 0.9;
+    }
 
-      h3{
-        font-weight: bolder;
-      }
+    a{
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    h3{
+      font-weight: bolder;
+    }
   }
 
   #post1:hover{
-    background-image: image-url("redtrikke");
     text-shadow: 1px 1px 3px #FFF;
     font-weight: bolder;
+
+    img {
+      opacity: 1.0;
+    }
 
     a{
     color: #083451;
@@ -147,23 +154,29 @@ header {
   }
 
   #post2{
-    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("T78csCUTout");
-    background-size: cover;
+    // background-color: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75));
     height: 355px;
 
-      a{
-        color: #FFF;
-        text-decoration: none;
-      }
+    img{
+      opacity: 0.9;
+    }
 
-      h3{
-        font-weight: bolder;
-      }
+    a{
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    h3{
+      font-weight: bolder;
+    }
   }
 
   #post2:hover{
-    background-image: image-url("T78csCUTout");
     text-shadow: 1px 1px 3px #FFF;
+
+    img{
+      opacity: 1.0;
+    }
 
     a{
     color: #083451;
@@ -176,9 +189,12 @@ header {
   }
 
   #post3{
-    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("lifestyles_pro_01");
-    background-size: cover;
+    // background-color: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75));
     height: 355px;
+
+    img{
+      opacity: 0.9;
+    }
 
     a{
       color: #FFF;
@@ -191,11 +207,14 @@ header {
   }
 
   #post3:hover{
-    background-image: image-url("lifestyles_pro_01");
     text-shadow: 1px 1px 3px #FFF;
 
+    img{
+      opacity: 1.0;
+    }
+
     a{
-      color: #083451;
+      color: #083451    ;
       text-decoration: none;
       font-weight: bolder;
     }
@@ -206,9 +225,12 @@ header {
   }
 
   #post4{
-    background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url("trikkeinaction");
-    background-size: cover;
+    // background-color: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75));
     height: 355px;
+
+    img{
+      opacity: 0.9;
+    }
 
     a{
       color: #FFF;
@@ -222,8 +244,11 @@ header {
   }
 
   #post4:hover{
-    background-image: image-url("trikkeinaction");
     text-shadow: 1px 1px 3px #FFF;
+
+    img {
+      opacity: 1.0;
+    }
 
     a{
     color: #083451;

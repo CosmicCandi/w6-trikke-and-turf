@@ -52,18 +52,20 @@
       </div>
 
       <div class="row">
-        <div id="post1" class="col-sm-3 photos text-center">
-          <a href="#" class="bottom"><h3>Exciting content!</h3></a>
+        <% @posts.each.with_index do |post, i| %>
+          <div style="background-image: url(<%= image_path post.photo%>);" id="post<%= i + 1 %>" class="col-sm-3 photos text-center">
+          <h3><%= link_to post.title, post, class:"bottom" %></h3>
         </div>
-        <div id="post2" class="col-sm-3 photos text-center">
+        <!-- <div id="post2" class="col-sm-3 photos text-center">
           <a href="#" class="bottom"><h3>Exciting content!</h3></a>
-        </div>
-        <div id="post3" class="col-sm-3 photos text-center">
+        </div> -->
+        <!-- <div id="post3" class="col-sm-3 photos text-center">
           <a href="#" class="bottom"><h3>Exciting content!</h3></a>
         </div>
         <div id="post4" class="col-sm-3 photos text-center">
           <a href="#" class="bottom"><h3>Exciting content!</h3></a>
-        </div>
+        </div> -->
+       <% end %>
       </div>
     </div>
 

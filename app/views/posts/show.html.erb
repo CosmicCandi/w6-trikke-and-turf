@@ -2,18 +2,18 @@
 
     <!--Post Title goes here-->
     <div class="col-sm-5 col-sm-offset-1 blog">
-      <h1 class="title text-uppercase"><%= @posts.find(params[:id].title%></h1>
+      <h1 class="title text-uppercase"><%= @post_most_recent.title %></h1>
         <!-- Avatar goes here -->
-        <%= image_tag @posts.user.image, class: "img-circle author-small", alt: "#{@posts.user.username}'s avatar" %>
+        <%= image_tag @post_most_recent.user.image, class: "img-circle author-small", alt: "#{@post_most_recent.user.username}'s avatar" %>
 
         <!-- Username goes here -->
-        <%= @posts.user.username.capitalize %>
+        <%= @post_most_recent.user.username.capitalize %>
 
         <!-- Timestamp goes here -->
-        on <%= link_to @posts.created_at.strftime("%A %b. %e %l:%m%P") %>
+        on <%= link_to @post_most_recent.created_at.strftime("%A %b. %e %l:%m%P") %>
 
         <!-- Post body goes here -->
-          <%= simple_format @posts.body, class:"blog-body" %>
+          <%= simple_format @post_most_recent.body, class:"blog-body" %>
           <a href="#" class="primary">
           <span class="button-icon">
           <i class="glyphicon glyphicon-comment"></i>
@@ -35,8 +35,8 @@
     </div>
 
     <div class="col-sm-5 col-sm-offset-1 items-center about">
-      <%= image_tag @posts.user.image, class: "img-circle author-large", alt: "#{@posts.user.username}'s avatar" %>
-      <%= simple_format @posts.user.username.capitalize, class: "text-center" %>
+      <%= image_tag @post_most_recent.user.image, class: "img-circle author-large", alt: "#{@post_most_recent.user.username}'s avatar" %>
+      <%= simple_format @post_most_recent.user.username.capitalize, class: "text-center" %>
       <div class="social_links text-center">
         <a href="http://www.twitter.com"> Twitter</a>
         <a href="http://www.facebook.com">Facebook</a>
@@ -48,7 +48,7 @@
       </div>
       <div class="col-sm-5 col-sm-offset-3 author-bio">
         <h5 class="text-left text-uppercase">Sidebar section heading</h5>
-        <%= @posts.user.bio %>
+        <%= @post_most_recent.user.bio %>
       </div>
 
     </div>

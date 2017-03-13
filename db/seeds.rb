@@ -16,10 +16,13 @@
   )
 
   3.times do
+    photo_array = ["redtrikke", "lifestyles_pro_01", "T78csCUTout", "trikkeinaction"]
+
     @post = Post.create!(
       title: Faker::TwinPeaks.quote,
-      body: Faker::Hipster.paragraphs(rand(5..15)).join("\n\n"),
+      body: Faker::Hipster.paragraphs(rand(5..8)).join("\n\n"),
       user: @user,
+      photo: photo_array.sample,
       created_at: rand(1..700).days.ago
     )
   end

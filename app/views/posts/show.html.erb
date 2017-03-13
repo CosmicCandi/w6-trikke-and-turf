@@ -1,0 +1,57 @@
+<div class="row">
+
+    <!--Post Title goes here-->
+    <div class="col-sm-5 col-sm-offset-1 blog">
+      <h1 class="title text-uppercase"><%= @posts.find(params[:id].title%></h1>
+        <!-- Avatar goes here -->
+        <%= image_tag @posts.user.image, class: "img-circle author-small", alt: "#{@posts.user.username}'s avatar" %>
+
+        <!-- Username goes here -->
+        <%= @posts.user.username.capitalize %>
+
+        <!-- Timestamp goes here -->
+        on <%= link_to @posts.created_at.strftime("%A %b. %e %l:%m%P") %>
+
+        <!-- Post body goes here -->
+          <%= simple_format @posts.body, class:"blog-body" %>
+          <a href="#" class="primary">
+          <span class="button-icon">
+          <i class="glyphicon glyphicon-comment"></i>
+          </span>
+          <span class="button-label">Read Comments</span>
+        </a>
+        <a href="#" class="primary">
+          <span class="button-icon">
+            <i class="glyphicon glyphicon-cloud-upload"></i>
+          </span>
+          <span class="button-label">Read Later</span>
+        </a>
+        <a href="#" class="primary">
+          <span class="button-icon">
+            <i class="glyphicon glyphicon-share"></i>
+          </span>
+          <span class="button-label">Share This Post</span>
+        </a>
+    </div>
+
+    <div class="col-sm-5 col-sm-offset-1 items-center about">
+      <%= image_tag @posts.user.image, class: "img-circle author-large", alt: "#{@posts.user.username}'s avatar" %>
+      <%= simple_format @posts.user.username.capitalize, class: "text-center" %>
+      <div class="social_links text-center">
+        <a href="http://www.twitter.com"> Twitter</a>
+        <a href="http://www.facebook.com">Facebook</a>
+        <a href="http://www.instagram.com">Instagram</a>
+      </div>
+      <div class="ads">
+        <%= image_tag "redtrikke", class: "fake-ad-image items-center" %>
+        <p class="col-sm-5 col-sm-offset-4 text-right"><a href="#">About this ad</a></p><br />
+      </div>
+      <div class="col-sm-5 col-sm-offset-3 author-bio">
+        <h5 class="text-left text-uppercase">Sidebar section heading</h5>
+        <%= @posts.user.bio %>
+      </div>
+
+    </div>
+
+<!--End Center Content Row-->
+</div>

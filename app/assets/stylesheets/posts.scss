@@ -1,3 +1,95 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+  // * {
+  //   border: 1px solid red;
+  // }
+
+
+.author-small{
+  height: 30px;
+  width: 30px;
+}
+
+.title {
+  font-size: 45px;
+  color: #063455;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-body{
+  padding-top: 30px;
+}
+
+.about {
+
+  .author-large{
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 0px auto;
+  }
+
+  .social_links {
+    padding-bottom: 40px;
+  }
+
+  .fake-ad-image{
+    height: 250px;
+    width: auto;
+    margin: 0px auto;
+    margin-bottom: 0px;
+    display: block;
+    padding-bottom: 0px;
+  }
+
+  .author-bio{
+    padding-top: 30px;
+
+    h5{
+      font-weight: bolder;
+      color: #063455;
+
+    }
+  }
+
+}
+
+
+
+.primary {
+    color: #fff;
+    background-color: #A4B3BF;
+    padding: 8px 0px;
+    text-decoration: none;
+    margin-right: 10px;
+
+    .button-icon{
+      background-color: #5D6970;
+      padding: 8px;
+      text-decoration: none;
+    }
+
+    .button-label{
+      padding: 5px;
+    }
+  }
+
+.primary:hover, .primary:focus, .primary:active,  .open>.dropdown-toggle.primary {
+    color: #fff;
+    background-color: #0F6DB5;
+    padding: 8px 0px;
+    text-decoration: none;
+
+    .button-icon{
+      background-color: #063455;
+      padding: 8px;
+      text-decoration: none;
+    }
+
+    .button-label{
+      padding: 5px;
+    }
+}

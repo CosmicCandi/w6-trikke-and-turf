@@ -7,18 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 5.times do
-  @username = Faker::Internet.user_name(nil, %w(_ -))
+  @username = Faker::Internet.user_name(nil, %w(-))
   @user = User.create!(
     username: @username,
     image: Faker::Avatar.image,
-    bio: Faker::Hipster.paragraph(2),
+    bio: Faker::Hipster.paragraph(3),
     email: Faker::Internet.safe_email(@username)
   )
 
   3.times do
     @post = Post.create!(
       title: Faker::TwinPeaks.quote,
-      body: Faker::Hipster.paragraph(rand(1..6)),
+      body: Faker::Hipster.paragraphs(rand(5..15)).join("\n\n"),
       user: @user,
       created_at: rand(1..700).days.ago
     )

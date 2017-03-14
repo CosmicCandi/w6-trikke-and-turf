@@ -16,7 +16,7 @@
   )
 
   3.times do
-    photo_array = ["redtrikke", "lifestyles_pro_01", "T78csCUTout", "trikkeinaction"]
+    photo_array = ["redtrikke.jpg", "lifestyles_pro_01.gif", "T78csCUTout.png", "trikkeinaction.jpg"]
 
     @post = Post.create!(
       title: Faker::TwinPeaks.quote,

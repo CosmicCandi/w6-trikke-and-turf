@@ -53,7 +53,7 @@
 
       <div class="row">
         <% @posts.each.with_index do |post, i| %>
-          <div style="background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), image-url(<%= image_path post.photo%>);" id="post<%= i + 1 %>" class="col-sm-3 photos text-center">
+          <div style="background-image: linear-gradient(rgba(15,109,181,0.3), rgba(15,109,181,0.75)), url(<%= image_path post.photo%>);" id="post<%= i + 1 %>" class="col-sm-3 photos text-center">
           <h3><%= link_to post.title, post, class:"bottom" %></h3>
         </div>
        <% end %>

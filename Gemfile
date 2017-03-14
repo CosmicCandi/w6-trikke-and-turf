@@ -30,6 +30,7 @@ gem 'active_model_serializers'
 gem 'faker'
 gem 'pry-rails'
 gem 'sendgrid-ruby'
+gem 'simple-form'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -29,6 +29,7 @@ gem 'autoprefixer-rails'
 gem 'active_model_serializers'
 gem 'faker'
 gem 'pry-rails'
+gem 'sendgrid-ruby'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

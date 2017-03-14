@@ -10,6 +10,7 @@ before_action :find_post, only: [:edit, :show, :update]
   def show
     @post = Post.find(params[:id])
     @posts = Post.all.order(created_at: :desc).where("id != ?", @post.id).first(4)
+    render :index
   end
 
   def new

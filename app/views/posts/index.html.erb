@@ -41,7 +41,11 @@
         <a href="http://www.twitter.com"> Twitter</a>
         <a href="http://www.facebook.com">Facebook</a>
         <a href="http://www.instagram.com">Instagram</a>
-        <br /> <br />
+        <br />
+        <% if flash[:success] %>
+          <%= simple_format flash[:success], class:"alert alert-success" %>
+        <% end %>
+        <br />
         <% if current_user %>
           <!-- Show New Post Button -->
           <%= link_to new_post_path, class:"primary" do %>

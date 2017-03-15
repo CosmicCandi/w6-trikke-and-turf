@@ -10,6 +10,7 @@
   @username = Faker::Internet.user_name(nil, %w(-))
   @user = User.create!(
     username: @username,
+    password: Faker::Internet.password,
     image: Faker::Avatar.image,
     bio: Faker::Hipster.paragraph(3),
     email: Faker::Internet.safe_email(@username)

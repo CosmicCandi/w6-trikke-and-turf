@@ -42,26 +42,38 @@
         <a href="http://www.facebook.com">Facebook</a>
         <a href="http://www.instagram.com">Instagram</a>
         <br /> <br />
-        <a href="/posts/new" class="primary">
-          <span class="button-icon">
+        <% if current_user %>
+          <!-- Show New Post Button -->
+          <%= link_to new_post_path, class:"primary" do %>
+            <span class="button-icon">
             <i class="glyphicon glyphicon-plus"></i>
-          </span>
-          <span class="button-label">New Post</span>
-        </a>
-        <a href="/posts/<%= @post.id %>/edit" class="primary">
-          <span class="button-icon">
+            </span>
+            <span class="button-label">New Post</span>
+          <% end %>
+          <!-- Show Edit Post Button  -->
+          <%= link_to edit_post_path(@post), class:"primary" do %>
+            <span class="button-icon">
             <i class="glyphicon glyphicon-pencil"></i>
-          </span>
-          <span class="button-label">Edit Post</span>
-        </a>
+            </span>
+            <span class="button-label">Edit Post</span>
+          <% end %>
+          <!-- Show Sign Out Button -->
+          <%= link_to logout_path, class:"primary", method: "delete" do %>
+            <span class="button-icon">
+            <i class="glyphicon glyphicon-plus"></i>
+            </span>
+            <span class="button-label">Sign out</span>
+          <% end %>
+        <% end %>
       </div>
+
       <div class="ads">
         <%= image_tag "redtrikke.jpg", class: "fake-ad-image items-center" %>
         <p class="col-sm-5 col-sm-offset-4 text-right"><a href="#">About this ad</a></p><br />
       </div>
       <div class="col-sm-5 col-sm-offset-3 author-bio">
-        <h5 class="text-left text-uppercase">Sidebar section heading</h5>
-        <%= @post.user.bio %>
+        <h5 class="text-center text-uppercase">About <%=@post.user.username %></h5>
+        <%= simple_format @post.user.bio, class: "text-left" %>
       </div>
     </div>
 

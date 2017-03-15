@@ -1,3 +1,17 @@
+<% if @user.errors.any? %>
+<div class="row">
+  <div class="bg-danger col-sm-3 text-center col-sm-offset-2">
+    <ul class="list-unstyled">
+      <% @user.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
+
 <h1>Sign-up:</h1>
 <%= simple_form_for @user do |f| %>
 <%= f.input :username %>

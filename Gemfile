@@ -31,6 +31,8 @@ gem 'faker'
 gem 'pry-rails'
 gem 'sendgrid-ruby'
 gem 'simple_form'
+gem 'carrierwave'
+gem 'figaro'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

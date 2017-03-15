@@ -51,18 +51,20 @@
             <span class="button-label">New Post</span>
           <% end %>
           <!-- Show Edit Post Button  -->
-          <%= link_to edit_post_path(@post), class:"primary" do %>
-            <span class="button-icon">
-            <i class="glyphicon glyphicon-pencil"></i>
-            </span>
-            <span class="button-label">Edit Post</span>
+          <% if current_user == @post.user %>
+            <%= link_to edit_post_path(@post), class:"primary" do %>
+              <span class="button-icon">
+              <i class="glyphicon glyphicon-pencil"></i>
+              </span>
+              <span class="button-label">Edit Post</span>
+            <% end %>
           <% end %>
           <!-- Show Sign Out Button -->
           <%= link_to logout_path, class:"primary", method: "delete" do %>
             <span class="button-icon">
             <i class="glyphicon glyphicon-plus"></i>
             </span>
-            <span class="button-label">Sign out</span>
+            <span class="button-label">Logout</span>
           <% end %>
         <% end %>
       </div>

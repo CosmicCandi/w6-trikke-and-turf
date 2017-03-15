@@ -19,7 +19,7 @@
     photo_array = ["redtrikke.jpg", "lifestyles_pro_01.gif", "T78csCUTout.png", "trikkeinaction.jpg"]
 
     @post = Post.create!(
-      title: Faker::TwinPeaks.quote,
+      title: Faker::StarWars.quote,
       body: Faker::Hipster.paragraphs(rand(5..8)).join("\n\n"),
       user: @user,
       photo: photo_array.sample,

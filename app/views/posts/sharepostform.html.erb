@@ -1,0 +1,15 @@
+<%= simple_format @post.user.username %>
+<%= simple_format  @post.title %>
+<% simple_format @post.body %>
+
+<div class = "container">
+  <div class="row">
+    <div class="col-sm-6">
+      <%= simple_form_for :share do |f| %>
+        <%= f.input :user %>
+        <%= f.input :email %>
+        <%= f.submit "Share", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+  </div>
+</div>

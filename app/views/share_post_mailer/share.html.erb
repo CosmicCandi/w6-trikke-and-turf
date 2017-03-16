@@ -1,0 +1,13 @@
+<p>Greetings from the Trikke and Turf Blogosphere! Your friend, <%= @user.username %>, thought you would like to see this post!</p>
+
+  <%= simple_format @post.user.username %>
+  <%= simple_format @post.title %>
+  <%= simple_format @post.body %>
+
+<p>
+   We sincerely hope you enjoyed this post. If you did and you'd like to see more, please visit us at: <%= link_to "Trikke and Turf", root_url %>!
+</p>
+
+<p>Sincerely,</p>
+<p>The Staff</p>
+<p>Trikke and Turf Blogosphere</p>

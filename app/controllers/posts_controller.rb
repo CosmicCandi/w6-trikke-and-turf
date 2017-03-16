@@ -37,10 +37,21 @@ before_action :find_post, only: [:edit, :show, :update]
     end
   end
 
+  def share
+    @post = Post.find(params[:id])
+    @user = current_user
+    render 'sharepostform'
+  end
+
+  def email
+     SharePostMailer.share(@email).deliver
+     redirect_to :root, flash[:success] = "The post was successfully shared!"
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:user_id,:title, :body, :photo)
+    params.require(:post).permit(:user_id,:title, :body, :photo, :photo_upload)
   end
 
   def find_post

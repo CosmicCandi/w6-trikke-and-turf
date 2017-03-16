@@ -16,7 +16,8 @@
   <div class="row">
     <div class="col-sm-6">
     <%= simple_form_for @post, html: {class: "form-horizontal"} do |f| %>
-      <%= f.input :photo %>
+      <%= f.input :photo%>
+      <%= f.input :photo_upload %>
       <%= f.input :title %>
       <%= f.input :body %>
       <%= f.submit class: "btn btn-primary" %>

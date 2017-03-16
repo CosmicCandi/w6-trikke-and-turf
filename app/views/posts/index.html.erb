@@ -14,6 +14,11 @@
 
         <!-- Post body goes here -->
           <%= simple_format @post.body, class:"blog-body" %>
+          <% if @post.photo_upload != nil %>
+          <%= image_tag @post.photo_upload %>
+          <% end %>
+          <br /><br />
+
           <a href="#" class="primary">
           <span class="button-icon">
           <i class="glyphicon glyphicon-comment"></i>
@@ -26,12 +31,12 @@
           </span>
           <span class="button-label">Read Later</span>
         </a>
-        <a href="#" class="primary">
+        <%= link_to share_path(@post), class:"primary" do %>
           <span class="button-icon">
-            <i class="glyphicon glyphicon-share"></i>
+          <i class="glyphicon glyphicon-plus"></i>
           </span>
           <span class="button-label">Share This Post</span>
-        </a>
+        <% end %>
     </div>
 
     <div class="col-sm-5 col-sm-offset-1 items-center about">

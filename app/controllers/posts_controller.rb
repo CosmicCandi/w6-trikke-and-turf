@@ -44,8 +44,11 @@ before_action :find_post, only: [:edit, :show, :update]
   end
 
   def email
-     SharePostMailer.share(@email).deliver
-     redirect_to :root, flash[:success] = "The post was successfully shared!"
+    @post = Post.find(params[:id])
+    @user = current_user
+    flash[:success] = "The post was successfully shared!"
+     SharePostMailer.share(@post, @user, params[:share][:email]).deliver
+     redirect_to @post
   end
 
   private
